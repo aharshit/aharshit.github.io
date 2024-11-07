@@ -1,4 +1,3 @@
-/* Reset margin and padding for full viewport coverage */
 * {
     margin: 0;
     padding: 0;
@@ -8,33 +7,71 @@
   /* Basic Styling */
   body {
     font-family: Arial, sans-serif;
+    font-size: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Set the height of the body to the full viewport height */
+    height: 100vh;
     background-color: #f4f4f9;
   }
   
   .container {
     display: flex;
-    width: 100%; /* Make the container take up the full width */
-    height: 100%; /* Make the container take up the full height */
-    max-width: none; /* Remove the max-width limit */
+    width: 100%;
+    height: 100%;
     background-color: #fff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    border-radius: 0; /* Remove the border-radius */
-    overflow: auto; /* Add scrollbars if the content exceeds the viewport */
+    overflow: hidden;
   }
   
   /* Left Sidebar */
   .sidebar {
     background-color: #333;
     color: #fff;
-    width: 25%; /* Take 25% of the container width */
+    width: 25%;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 30%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .sidebar {
+      width: 100%;
+    }
+  }
+  
+  .sidebar img {
+    width: 60%;
+    border-radius: 50%;
+    margin-top: 20px;
+  }
+  
+  .sidebar h3 {
+    margin: 15px 0;
+  }
+  
+  .sidebar p {
+    text-align: center;
+    font-size: 0.9rem;
+  }
+  
+  .sidebar .social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .sidebar .social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
   }
   
   /* Right Content Area */
@@ -44,4 +81,53 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+  
+  .content nav {
+    display: flex;
+    gap: 20px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+  
+  .content nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 8px 12px;
+    transition: background-color 0.3s;
+  }
+  
+  .content nav a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .content section {
+    margin-bottom: 30px;
+  }
+  
+  .content section h2 {
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .content ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .content ul li {
+    margin: 15px 0;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    body {
+      font-size: 12px;
+    }
   }
