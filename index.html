@@ -1,7 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+
+  <div class="container">
+    <!-- Left Sidebar -->
+    <div class="sidebar">
+      <img src="profile-photo.jpg" alt="Your Profile Photo">
+      <h3>Harshit</h3>
+      <p>Passionate about technology, machine learning, and sports.</p>
+      
+      <!-- Social Icons -->
+      <div class="social-icons">
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">&#x1F465; <!-- LinkedIn Icon --></a>
+        <a href="https://github.com/yourusername" target="_blank">&#x1F4BB; <!-- GitHub Icon --></a>
+        <a href="mailto:your-email@example.com">&#x2709; <!-- Email Icon --></a>
+      </div>
+    </div>
+
+    <!-- Right Content Area -->
+    <div class="content">
+      <!-- Navigation Links -->
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="resume.pdf" target="_blank">Resume</a>
+      </nav>
+
+      <!-- About Section -->
+      <section id="about">
+        <h2>About</h2>
+        <p>I am a student with a deep interest in technology, machine learning, and sports. I enjoy solving complex problems and exploring new trends in technology.</p>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>Sentiment Analysis</strong>: Built a machine learning model to analyze text sentiment.</li>
+          <li><strong>Human Face and Spoofing Detection</strong>: Developed a CNN model for real-time face spoof detection.</li>
+          <li><strong>Real-Time Chat Application</strong>: Created a chat app using React.js, Express.js, and Socket.io.</li>
+          <li><strong>Image Caption Generator</strong>: Collaboratively developed an image captioning tool using deep learning.</li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+
 </body>
 </html>
