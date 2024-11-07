@@ -11,19 +11,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh; /* Set the height of the body to the full viewport height */
     background-color: #f4f4f9;
   }
   
   .container {
     display: flex;
-    width: 90vw; /* Cover most of the viewport width */
-    height: 90vh; /* Cover most of the viewport height */
-    max-width: 1200px;
+    width: 100%; /* Make the container take up the full width */
+    height: 100%; /* Make the container take up the full height */
+    max-width: none; /* Remove the max-width limit */
     background-color: #fff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    overflow: hidden;
+    border-radius: 0; /* Remove the border-radius */
+    overflow: auto; /* Add scrollbars if the content exceeds the viewport */
   }
   
   /* Left Sidebar */
@@ -37,34 +37,6 @@
     padding: 20px;
   }
   
-  .sidebar img {
-    width: 60%;
-    border-radius: 50%;
-    margin-top: 20px;
-  }
-  
-  .sidebar h3 {
-    margin: 15px 0;
-  }
-  
-  .sidebar p {
-    text-align: center;
-    font-size: 0.9rem;
-  }
-  
-  .sidebar .social-icons {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .sidebar .social-icons a {
-    color: #fff;
-    margin: 0 10px;
-    font-size: 24px;
-    text-decoration: none;
-  }
-  
   /* Right Content Area */
   .content {
     flex: 1;
@@ -73,42 +45,3 @@
     flex-direction: column;
     justify-content: space-between;
   }
-  
-  .content nav {
-    display: flex;
-    gap: 20px;
-    font-weight: bold;
-    margin-bottom: 30px;
-  }
-  
-  .content nav a {
-    text-decoration: none;
-    color: #333;
-    padding: 5px 10px;
-    transition: background-color 0.3s;
-  }
-  
-  .content nav a:hover {
-    background-color: #ddd;
-    border-radius: 4px;
-  }
-  
-  .content section {
-    margin-bottom: 20px;
-  }
-  
-  .content section h2 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .content ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .content ul li {
-    margin: 10px 0;
-  }
-  
