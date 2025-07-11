@@ -30,6 +30,7 @@ const App = () => {
             <Resume />
             <Education />
             <Experience />
+            <Contact />
           </div>
         );
       default:
