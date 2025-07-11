@@ -1,15 +1,22 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+ @tailwind base;
+  @tailwind components;
+  @tailwind utilities;
 
-@layer base {
-  html {
-    scroll-behavior: smooth;
+  @layer base {
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    body {
+      font-family: "Lacquer", system-ui;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    
+    .dark body {
+      @apply bg-black text-white;
+    }
+    
+    .light body {
+      @apply bg-white text-black;
+    }
   }
-  
-  body {
-    @apply bg-black text-white;
-    font-family: "Lacquer", system-ui;
-  }
-}
-

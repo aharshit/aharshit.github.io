@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { personalInfo } from '../../data/personalInfo';
 import heroImage from '../../assets/sleeping-computer-keyboard-tired-overworked-office-worker-businessman-office-vector-cartoon-stick-figure-businessman-215504142.webp';
 
-const Hero = () => {
+const Hero = ({ isDarkMode }) => {
   const [currentMood, setCurrentMood] = useState(0);
-     
+  
   const moods = [
     "ctrl+c, ctrl+v is my best friend",
     "it works on my machine 🤷‍♂️",
@@ -23,28 +23,25 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center px-6 relative">
-      {/* Main Content */}
+    <section id="home" className="min-h-screen flex items-center justify-center px-6">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-          {/* Text Content */}
           <div className="text-left">
-            <h1 className="text-4xl md:text-6xl font-normal mb-4 text-gray-300">
+            <h1 className="text-4xl md:text-6xl font-normal mb-4 transition-colors duration-300 text-gray-700 dark:text-gray-300">
               hello i'm {personalInfo.name}
             </h1>
-                     
-            <div className="text-lg md:text-xl text-gray-500 mb-2 h-8">
+            
+            <div className="text-lg md:text-xl mb-2 h-8 transition-colors duration-300 text-gray-600 dark:text-gray-500">
               <span className="animate-pulse">
                 {moods[currentMood]}
               </span>
             </div>
           </div>
-
-          {/* Image */}
+          
           <div className="flex justify-center md:justify-end">
             <div className="relative">
               <img 
-                src={heroImage} 
+                src={heroImage}
                 alt="Tired programmer at computer"
                 className="w-80 md:w-96 h-auto opacity-80 hover:opacity-100 transition-opacity duration-300"
               />
@@ -53,16 +50,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-             
-      <style jsx>{`
-        @keyframes fade-in {
-          from { opacity: 0; transform: translateY(10px); }
-          to { opacity: 0.75; transform: translateY(0); }
-        }
-        .animate-fade-in {
-          animation: fade-in 0.3s ease-out;
-        }
-      `}</style>
     </section>
   );
 };
