@@ -1,22 +1,85 @@
- @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  @layer base {
-    html {
-      scroll-behavior: smooth;
-    }
+@layer base {
+  :root {
+    /* Light theme variables */
+    --color-background: #ffffff;
+    --color-surface: #f8fafc;
+    --color-border: #e2e8f0;
     
-    body {
-      font-family: "Lacquer", system-ui;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+    --color-text-primary: #1e293b;
+    --color-text-secondary: #475569;
+    --color-text-muted: #64748b;
     
-    .dark body {
-      @apply bg-black text-white;
-    }
-    
-    .light body {
-      @apply bg-white text-black;
-    }
+    --color-accent: #3b82f6;
+    --color-accent-hover: #2563eb;
   }
+
+  .dark {
+    --color-background: #000000;
+    --color-surface: #1e293b;
+    --color-border: #334155;
+    
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #e2e8f0;
+    --color-text-muted: #94a3b8;
+    
+    --color-accent: #60a5fa;
+    --color-accent-hover: #3b82f6;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Lacquer", system-ui;
+    background-color: var(--color-background);
+    color: var(--color-text-primary);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@layer components {
+  .text-primary {
+    color: var(--color-text-primary);
+  }
+  
+  .text-secondary {
+    color: var(--color-text-secondary);
+  }
+  
+  .text-muted {
+    color: var(--color-text-muted);
+  }
+  
+  .bg-primary {
+    background-color: var(--color-background);
+  }
+  
+  .bg-surface {
+    background-color: var(--color-surface);
+  }
+  
+  .border-primary {
+    border-color: var(--color-border);
+  }
+  
+  .accent {
+    color: var(--color-accent);
+  }
+  
+  .accent-hover:hover {
+    color: var(--color-accent-hover);
+  }
+  
+  .bg-accent {
+    background-color: var(--color-accent);
+  }
+  
+  .bg-accent-hover:hover {
+    background-color: var(--color-accent-hover);
+  }
+}

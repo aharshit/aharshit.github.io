@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { personalInfo } from '../../data/personalInfo';
-import heroImage from '../../assets/sleeping-computer-keyboard-tired-overworked-office-worker-businessman-office-vector-cartoon-stick-figure-businessman-215504142.webp';
+import heroImage from '../../assets/image.jpg';
 
-const Hero = ({ isDarkMode }) => {
+const Hero = () => {
   const [currentMood, setCurrentMood] = useState(0);
   
   const moods = [
@@ -27,11 +27,11 @@ const Hero = ({ isDarkMode }) => {
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           <div className="text-left">
-            <h1 className="text-4xl md:text-6xl font-normal mb-4 transition-colors duration-300 text-gray-700 dark:text-gray-300">
+            <h1 className="text-4xl md:text-6xl font-light mb-4 transition-colors duration-300 text-secondary">
               hello i'm {personalInfo.name}
             </h1>
             
-            <div className="text-lg md:text-xl mb-2 h-8 transition-colors duration-300 text-gray-600 dark:text-gray-500">
+            <div className="text-lg md:text-xl mb-2 h-8 transition-colors duration-300 text-muted">
               <span className="animate-pulse">
                 {moods[currentMood]}
               </span>
