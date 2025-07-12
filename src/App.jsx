@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navigation from './components/common/Navigation';
 import Hero from './components/sections/Hero';
 import About from './components/sections/About';
@@ -7,54 +8,45 @@ import Contact from './components/sections/Contact';
 import Education from './components/sections/Education';
 import Experience from './components/sections/Experience';
 import Resume from './components/sections/Resume';
+import Matrix from './projects/Matrix';
 import { useTheme } from './useTheme';
 
 const App = () => {
   const { isDarkMode, toggleTheme } = useTheme();
-  const [activeView, setActiveView] = useState('home');
 
-  const renderView = () => {
-    switch (activeView) {
-      case 'home':
-        return (
-          <div className="min-h-screen">
-            <Hero />
-            <About />
-            <Projects />
-            <Contact />
-          </div>
-        );
-      case 'resume':
-        return (
-          <div className="min-h-screen">
-            <Resume />
-            <Education />
-            <Experience />
-            <Contact />
-          </div>
-        );
-      default:
-        return (
-          <div className="min-h-screen">
-            <Hero />
-            <About />
-            <Projects />
-            <Contact />
-          </div>
-        );
-    }
-  };
+  const HomePage = () => (
+    <div className="min-h-screen">
+      <Hero />
+      <About />
+      <Projects />
+      <Contact />
+    </div>
+  );
+
+  const ResumePage = () => (
+    <div className="min-h-screen">
+      <Resume />
+      <Education />
+      <Experience />
+      <Contact />
+    </div>
+  );
 
   return (
-    <div className="min-h-screen overflow-x-hidden bg-primary">
-      <Navigation 
-        isDarkMode={isDarkMode} 
-        toggleTheme={toggleTheme} 
-        activeView={activeView} 
-        setActiveView={setActiveView}
-      />
-      {renderView()}
-    </div>
+    <Router>
+      <div className="min-h-screen overflow-x-hidden bg-primary">
+        <Navigation 
+          isDarkMode={isDarkMode}
+          toggleTheme={toggleTheme}
+        />
+        
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/resume" element={<ResumePage />} />
+          <Route path="/matrix" element={<Matrix />} />
+        </Routes>
+      </div>
+    </Router>
   );
 };
 

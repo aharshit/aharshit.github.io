@@ -6,19 +6,11 @@ export const skills = [
     items: ["C", "C++", "Python", "HTML", "CSS", "JavaScript", "Bash"]
   },
   {
-    category: "Developer Tools",
-    items: ["Git", "VS Code", "PyCharm", "Google Colab", "Docker", "Kubernetes", "PowerBI"]
+    category: "Tools & technologies",
+    items: ["Git", "VS Code", "PyCharm", "Google Colab", "Docker", "Kubernetes", "PowerBI","MongoDB","MySQL","AWS"]
   },
   {
-    category: "Frameworks",
-    items: ["PyTorch", "Express", "Node.js", "Hadoop", "Spark", "CUDA"]
+    category: "Frameworks & Libraries",
+    items: ["PyTorch", "Express", "Node.js", "Hadoop", "Spark", "CUDA","scikit-learn", "React.js", "nltk", "Bootstrap", "Hugging Face Transformer", "TensorFlow"]
   },
-  {
-    category: "Libraries",
-    items: ["scikit-learn", "React.js", "nltk", "Bootstrap", "Hugging Face Transformer", "TensorFlow"]
-  },
-  {
-    category:"Databases",
-    items: ["MongoDB","MySQL"]
-  }
 ];

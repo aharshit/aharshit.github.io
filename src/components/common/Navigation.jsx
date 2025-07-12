@@ -1,59 +1,61 @@
 import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { FiGithub, FiLinkedin, FiMail, FiSun, FiMoon } from 'react-icons/fi';
 import { personalInfo } from '../../data/personalInfo';
 
-const Navigation = ({ isDarkMode, toggleTheme, activeView, setActiveView }) => {
-  const handleNavClick = (view) => {
-    setActiveView(view);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
+const Navigation = ({ isDarkMode, toggleTheme }) => {
+  const location = useLocation();
+  const currentPath = location.pathname;
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm transition-colors duration-300 bg-white/20 dark:bg-black/20">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         
         <div className="hidden md:flex space-x-6">
-          <button 
-            onClick={() => handleNavClick('home')}
+          <Link 
+            to="/"
             className={`transition-colors duration-300 ${
-              activeView === 'home' 
+              currentPath === '/' 
                 ? 'text-secondary font-medium' 
                 : 'text-primary hover:text-secondary'
             }`}
           >
             home
-          </button>
-          <button 
-            onClick={() => handleNavClick('resume')}
+          </Link>
+          <Link 
+            to="/resume"
             className={`transition-colors duration-300 ${
-              activeView === 'resume' 
+              currentPath === '/resume' 
                 ? 'text-secondary font-medium' 
                 : 'text-primary hover:text-secondary'
             }`}
           >
             resume
-          </button>
+          </Link>
         </div>
 
         <div className="flex space-x-3 items-center">
           <a 
             href={personalInfo.social.email}
             className="transition-colors duration-300 text-primary hover:text-secondary"
-            target='_blank'
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FiMail className="w-5 h-5" />
           </a>
           <a 
             href={personalInfo.social.github}
             className="transition-colors duration-300 text-primary hover:text-secondary"
-            target='_blank'
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FiGithub className="w-5 h-5" />
           </a>
           <a 
             href={personalInfo.social.linkedin}
             className="transition-colors duration-300 text-primary hover:text-secondary"
-            target='_blank'
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <FiLinkedin className="w-5 h-5" />
           </a>
