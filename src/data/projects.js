@@ -1,7 +1,7 @@
 export const projects = [
     {
       id: 1,
-      title: "Accelerating Matrix Computation on gpu",
+      title: "gemm optimization on nvidia gpu",
       tech: ["Cuda"],
       route: "/matrix",
       github: "#"
