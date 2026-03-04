@@ -35,7 +35,7 @@
   }
 
   body {
-    font-family: "Lacquer", system-ui;
+    font-family: "Syne Mono", system-ui;
     background-color: var(--color-background);
     color: var(--color-text-primary);
     transition: background-color 0.3s ease, color 0.3s ease;
