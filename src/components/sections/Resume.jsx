@@ -25,7 +25,7 @@ const Resume = () => {
               <div className="h-0.5 bg-primary w-24"></div>
             </div>
             <a
-              href="https://drive.google.com/file/d/1TUVI5STjdOsWVnbolD7Sn4WHuVL-p7w6/view?usp=sharing"
+              href="https://drive.google.com/file/d/1D_O2Jvqr8fg79hOmg9nWY3EU6oAf4_qe/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 border border-primary text-primary hover:bg-primary hover:text-white transition-colors text-sm tracking-wider"
