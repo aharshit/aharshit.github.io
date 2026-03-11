@@ -19,7 +19,7 @@ const Projects = () => {
         </h2>
 
         <div className="space-y-16">
-          {projects.map((project) => (
+          {[...projects].reverse().map((project) => (
             <div key={project.id} className="group">
               <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-4">
