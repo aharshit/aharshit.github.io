@@ -30,7 +30,7 @@ const Navigation = ({ isDarkMode, toggleTheme }) => {
                 : 'text-primary hover:text-secondary'
             }`}
           >
-            Resume
+            More
           </Link>
         </div>
 

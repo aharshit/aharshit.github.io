@@ -19,9 +19,9 @@ const Resume = () => {
         <div className="mb-16">
           <div className="flex items-center justify-between mb-8">
             <div>
-              <h2 className="text-2xl font-light mb-2 text-secondary">
+              <h3 className="text-2xl font-light mb-2 text-secondary">
                 Some Stats About Me
-              </h2>
+              </h3>
               <div className="h-0.5 bg-primary w-24"></div>
             </div>
             <a
@@ -61,9 +61,9 @@ const Resume = () => {
         <div className="grid lg:grid-cols-3 gap-12 mb-12">
           <div className="lg:col-span-3">
             <div className="mb-8">
-              <h2 className="text-2xl font-light mb-2 text-secondary">
+              <h3 className="text-2xl font-light mb-2 text-secondary">
                 things i can do
-              </h2>
+              </h3>
               <div className="h-0.5 bg-primary w-24"></div>
             </div>
 
@@ -84,9 +84,9 @@ const Resume = () => {
 
         <div className="border-t pt-12 border-primary">
           <div className="mb-8">
-            <h2 className="text-2xl font-light mb-2 text-secondary">
+            <h3 className="text-2xl font-light mb-2 text-secondary">
               some certificates
-            </h2>
+            </h3>
             <div className="h-0.5 bg-primary w-24"></div>
           </div>
 
