@@ -20,7 +20,7 @@ const Resume = () => {
           <div className="flex items-center justify-between mb-8">
             <div>
               <h2 className="text-2xl font-light mb-2 text-secondary">
-                some stats about me
+                Some Stats About Me
               </h2>
               <div className="h-0.5 bg-primary w-24"></div>
             </div>
@@ -30,7 +30,7 @@ const Resume = () => {
               rel="noopener noreferrer"
               className="px-8 py-4 border border-primary text-primary hover:bg-primary hover:text-white transition-colors text-sm tracking-wider"
             >
-              view full resume
+              View Full Resume
             </a>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

@@ -6,7 +6,7 @@ const Education = () => {
     <section id="education" className="py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <h2 className="text-2xl font-light mb-8 text-secondary">
-          education
+          Education
         </h2>
         
         <div className="space-y-8">

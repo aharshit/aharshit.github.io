@@ -44,7 +44,7 @@ export const experienceData = [
       position: " Software Programmer Intern",
       company: "Sivive Enterprises",
       location: "Hyderabad,IN",
-      duration: "may 2023 - aug 2023",
+      duration: "May 2023 - Aug 2023",
       responsibilities: [
       "Engineered a backend system to retrieve uploaded documents from AWS S3, process them using AWS Textract to extract key-value pairs and tables, and generate a CSV file containing the extracted data, saving the file back to the S3 bucket.",
       "Implemented a React front-end with a document upload feature, displaying the processed document in a panel, and providing a button to download the generated CSV file, supporting multi-page document processing."
