@@ -6,10 +6,13 @@ export const experienceData = [
       location: "West Lafayette, IN",
       duration: "Feb 2025 - Present",
       responsibilities: [
-        "Developed a cross-platform desktop application using React and Electron.js, integrating C++ and Python-based multi-physics simulation scripts for real-time configuration and execution of hydraulic pump/motor models.",
-        "Accelerated simulation time by 30% by migrating deformation influence matrix calculations from CPU to GPU using CUDA.",
-        "Implemented real-time plotting of simulation results and VTK-based animations to display deformation and operational changes.",
-        "Engineered a thread-safe time profiler to diagnose performance bottlenecks, reporting total wall-clock time and call frequency for functions executed concurrently in a large-scale simulation."
+        "Developed a desktop application using React and Electron.js, integrating C++ and Python-based physics simulation scriptss.",
+        "Implemented end-to-end tests for the application, and set up GitHub Actions to automate test, and maintenance tasks.",
+        "Accelerated simulation time by 30% through CPU side optimizations and GPU acceleration using cuBLAS, cuSPARSE etc.",
+        "Implemented a dash-based server to display real time plotting of simulation results and VTK-based animations.",
+        "Engineered a thread-safe time profiler in C++, reporting total wall clock time, average time and call frequency for functions.",
+        "Building a RAG-based agent that understands software workflows and result files, provides actionable suggestions."
+
       ],
     },
     {
