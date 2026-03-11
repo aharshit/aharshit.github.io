@@ -20,7 +20,7 @@ const Navigation = ({ isDarkMode, toggleTheme }) => {
                 : 'text-primary hover:text-secondary'
             }`}
           >
-            home
+            Home
           </Link>
           <Link 
             to="/resume"
@@ -30,7 +30,7 @@ const Navigation = ({ isDarkMode, toggleTheme }) => {
                 : 'text-primary hover:text-secondary'
             }`}
           >
-            resume
+            Resume
           </Link>
         </div>
 
